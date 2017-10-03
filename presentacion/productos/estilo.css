@@ -1,0 +1,340 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/*end reset*/
+
+
+
+body{
+margin:auto;
+/* background: url(http://www.nodalideas.com/textures/trinsic_roof.png) repeat;*/
+background: none repeat scroll 0% 0% #4B4B4B;
+}
+
+select{background:none repeat scroll 0% 0% rgb(50, 118, 177)!important}
+
+#fondo{
+  z-index:-5;
+  -webkit-transform-style: preserve-3d;
+transform-style: preserve-3d;
+/* background: #fff;*/
+position: fixed;
+left: 15%;
+top:10%;
+margin: auto;
+width: 70%;
+height: 79%;
+
+font-size:4px;
+color:#fff;
+ /*border: 1px solid #fdfdfd;*/
+  transform: perspective(700px) rotateX(0deg);
+ -webkit-transform: perspective(700px) rotateX(0deg);
+ }
+ #piso{
+   z-index:1;
+transform-style: preserve-3d;
+-webkit-transform-style: preserve-3d;
+
+ /*background: url(http://pixelcoblog.com/wp-content/uploads/2010/09/Carbon-texture-textura-de-fibra-de-carbono.jpg) repeat scroll 0% 0% rgb(0, 0, 0);
+*/
+background: none repeat scroll 0% 0% #979797;
+position: fixed;
+left: 0%;
+bottom:0%;
+margin: auto;
+width: 100%;
+height: 100%;
+
+font-size:4px;
+color:#fff;
+ border: 1px solid #fdfdfd;
+  transform: perspective(700px) rotateX(70deg) translateZ(-350px) translateY(-200px) scaleX(3) scaleY(1) ;
+  -webkit-transform: perspective(700px) rotateX(70deg) translateZ(-350px) translateY(-200px) scaleX(3) scaleY(1) ;
+  //animation:rotate 5s infinite;
+  
+-webkit-box-shadow: inset 0px 0px 63px 44px rgba(54,54,54,0.48);
+-moz-box-shadow: inset 0px 0px 63px 44px rgba(54,54,54,0.48);
+box-shadow: inset 0px 0px 63px 44px rgba(54,54,54,0.48),5px 10px 7px rgba(0,0,0,0.5), -5px -10px 7px rgba(0,0,0,0.5);
+ }
+  #papel{
+  z-index: 1;
+  -webkit-transform-style: preserve-3d;
+transform-style: preserve-3d;
+background: none repeat scroll 0% 0% rgb(250, 250, 250);
+position: fixed;
+left: 0%;
+bottom: 0%;
+margin: auto;
+width: 100%;
+height: 96%;
+color: rgb(0, 0, 0);
+border: 5px ridge rgb(253, 253, 253);
+box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5), -5px 5px 7px rgba(0, 0, 0, 0.5);
+font-size: 18px;
+transform: perspective(1024px) rotateX(3deg) translateY(10px) translateZ(16px) scaleX(1) scaleY(1);
+-webkit-transform: perspective(1024px) rotateX(3deg) translateY(10px) translateZ(16px) scaleX(1) scaleY(1);
+
+  
+  //animation:rotate 5s infinite;
+  
+
+
+ }
+ 
+  @keyframes cambiar {
+    0% { transform: translateX(   -1000px )  }
+     100% { transform: translateX(   0px  )  }
+}
+ 
+ @keyframes rotate {
+    0% { transform: rotateX(   0deg )  }
+  50% { transform: rotateX( 3deg )  }
+     100% { transform: rotateX(   0deg )  }
+}
+ 
+#superior{
+
+/*background: url(http://us.123rf.com/400wm/400/400/1xpert/1xpert1109/1xpert110900056/10696291-carbono-plantilla-3d-textura-de-render.jpg) repeat scroll 0% 0% rgb(0, 0, 0);
+*/
+background:none repeat scroll 0% 0% rgba(240, 240, 240, 1);
+position: fixed;
+top: 0px;
+margin: auto;
+width: 100%;
+height: 7%;
+ border: 1px solid #fdfdfd;
+ 
+-webkit-box-shadow: inset 0px 0px 73px -9px rgba(250,245,250,1);
+-moz-box-shadow: inset 0px 0px 73px -9px rgba(250,245,250,1);
+box-shadow: inset 0px 0px 73px -9px rgba(250,245,250,1),
+5px 10px 7px rgba(0,0,0,0.5), -5px -10px 7px rgba(0,0,0,0.5);
+}
+h1{
+margin:auto;
+font-size:25px;
+color: rgb(66, 139, 202);
+padding-left:10%;
+padding-top: 0.3%;
+text-shadow: 
+1px 2px 0px rgba(220,220,220,1),
+2px 3px 1px rgba(180,180,180,1),
+3px 4px 3px rgba(150,150,150,1);
+}
+h2{
+margin:auto;
+font-size:15px;
+color:rgb(66, 139, 202);
+padding-left:12%;
+text-shadow: 
+0px 1px 0px rgba(120,120,120,1);
+}
+
+
+
+
+#derecha{
+  z-index:2;
+background: none repeat scroll 0% 0% rgba(240, 240, 240, 1);
+position: fixed;
+right: 0px;
+top:12%;
+margin: auto;
+/*width: 10%;*/
+height: 79%;
+
+font-size:16px;
+font-weight:bold;
+padding:10px;
+color:#fff;
+ border: 1px solid #fdfdfd;
+ box-shadow: inset 0px 0px 7px -9px rgba(250,245,250,1), -5px -10px 7px rgba(0,0,0,0.5);
+}
+.desplegar{
+top:5%;
+margin:5px;
+padding:5px;
+position: fixed;
+right:0px;
+}
+
+#derecha,#izquierda{
+display:none;
+}
+span:focus  ~ #derecha {
+  display: block;
+}
+
+span:focus  ~ #izquierda {
+  display: block;
+}
+#menuX{
+top:5%;
+left:45%;
+position: fixed;
+}
+.desplegarS{
+border-bottom:  1px solid #fff;
+border-left:  1px solid #fff;
+border-right:  1px solid #fff;
+
+margin:5px;
+padding:5px;
+position: fixed;
+
+background:none repeat scroll 0% 0% rgba(240, 240, 240, 1);
+color:fff;
+}
+.desplegarI{
+top:5%;
+margin:5px;
+padding:5px;
+position: fixed;
+float:left;
+}
+
+.desplegarIB{
+margin:5px;
+padding:5px;
+position: fixed;
+float: left;
+top: 5%;
+margin-left: 78px;
+}
+
+
+
+
+#superior a{
+text-decoration:none;
+}
+#superior a:hover{
+background:none repeat scroll 0% 0% rgb(240, 240, 240);
+color: rgb(66, 139, 202);
+}
+#acordion h3{
+background-color:#fff;
+}
+h3{
+box-shadow: 0px 9px 9px -12px rgb(0, 0, 0);
+}
+nav ul li {
+margin: 4px;
+padding: 3px;
+}
+nav ul li a{text-decoration:none;
+margin:5px;
+padding:5px;
+background-color:#fff;
+}
+nav ul li a:hover{
+background-color:#000;
+}
+.btn {
+border-radius: 0px;
+z-index: 6;
+padding: 4px 16px;
+margin: -1px;
+}
+
+#izquierda{
+  z-index:2;
+background: none repeat scroll 0% 0% rgba(240, 240, 240, 1);
+position: fixed;
+left: 0px;
+top:12%;
+margin: auto;
+/*width: 10%;*/
+height: 79%;
+
+font-size:4px;
+color:#fff;
+ border: 1px solid #fdfdfd;
+ box-shadow: inset 0px 0px 7px -9px rgba(250,245,250,1),
+5px 10px 7px rgba(0,0,0,0.5);
+text-align: center;
+}
+
+#inferior{
+  padding: 2px;
+  text-shadow: rgb(66, 139, 202)1px 1px 0px rgba(150,150,150,1);
+  z-index:3;
+ /*background: url(http://us.123rf.com/400wm/400/400/1xpert/1xpert1109/1xpert110900056/10696291-carbono-plantilla-3d-textura-de-render.jpg) repeat scroll 0% 0% rgb(0, 0, 0);
+*/
+background:none repeat scroll 0% 0% rgba(240, 240, 240, 1);
+position: fixed;
+bottom: 0px;
+margin: auto;
+width: 100%;
+height:5%;
+font-size:12px;
+color:rgb(66, 139, 202);
+ border: 1px solid #fdfdfd;
+ text-align:center;
+-webkit-box-shadow: inset 0px 0px 73px -9px rgba(250,245,250,1);
+-moz-box-shadow: inset 0px 0px 73px -9px rgba(250,245,250,1);
+box-shadow: inset 0px 0px 73px -9px rgba(250,245,250,1),5px 10px 7px rgba(0,0,0,0.5), -5px -10px 7px rgba(0,0,0,0.5);
+}
+
+@media only screen and (max-width: 1024px) {
+  
+    
+    #derecha,#izquierda{
+      display: none;
+    }
+
+}
+
+
